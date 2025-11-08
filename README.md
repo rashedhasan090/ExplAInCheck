@@ -38,7 +38,7 @@ Farmers and agricultural businesses need a way to **verify AI explanations befor
 
 Watch ExplAInCheck in action! See how our AI explanation verification system works with real agricultural scenarios:
 
-**[📺 Watch the Demo Video](https://1drv.ms/v/c/645fee2ef572d93d/EaKCkHo0eCRKh-Lmfeo_6FgBPJOiTT5HQpIat5Dt_BisgQ?e=zDtNSP)**
+**[📺 Watch the Demo Video](https://1drv.ms/v/c/645fee2ef572d93d/EWpqlwyv9v1IgS61TK_Z5XsBM7hPBg38tHpb5Fz2xzURxA?e=Ng9dgF)**
 
 *Click the link above to view our full demonstration on OneDrive.*
 
@@ -266,11 +266,6 @@ cd frontend && npm start
 
 ### Sunday 9:00 AM - 10:00 AM: Final Testing + Submission
 
----
-
-## Demo Video
-
-🎥 **[Watch our 3-minute demo]([https://youtu.be/demo-link](https://1drv.ms/v/c/645fee2ef572d93d/EaKCkHo0eCRKh-Lmfeo_6FgBPJOiTT5HQpIat5Dt_BisgQ?e=zDtNSP))**
 
 ---
 
