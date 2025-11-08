@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExplAInCheck - AI Explanation Verifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍌 ExplAInCheck</h1>
+            <p class="subtitle">Real-Time AI Explanation Verification for Smart Agriculture</p>
+            <div class="badges">
+                <span class="badge">CornHacks 2025</span>
+                <span class="badge agriculture">Agriculture Track</span>
+                <span class="badge banana">Banana Track 🍌</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Enter AI Explanation to Verify</h2>
+                <div class="input-group">
+                    <label for="domain-select">Domain:</label>
+                    <select id="domain-select">
+                        <option value="agriculture">Agriculture</option>
+                        <option value="nutrition">Nutrition</option>
+                        <option value="medical">Medical</option>
+                        <option value="general">General</option>
+                    </select>
+                </div>
+                
+                <textarea 
+                    id="explanation-input" 
+                    placeholder="Paste the AI-generated explanation here...\n\nExample:\n'You should water banana plants at 5pm because the soil is cooler, leading to less evaporation. Given that banana plants need consistent moisture, this timing maximizes water absorption.'">
+                </textarea>
+                
+                <div class="button-group">
+                    <button id="verify-btn" class="btn btn-primary">🔍 Verify Explanation</button>
+                    <button id="demo-btn" class="btn btn-secondary">📝 Load Demo</button>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <h2>Verification Results</h2>
+                
+                <div class="result-card">
+                    <h3>📊 Overall Assessment</h3>
+                    <div id="overall-result"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>🔗 Logical Structure</h3>
+                    <div id="logical-structure"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>⚠️ Detected Issues</h3>
+                    <div id="issues-list"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>💡 Assumptions & Gaps</h3>
+                    <div id="assumptions-list"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>✅ Verified Claims</h3>
+                    <div id="verified-claims"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built for CornHacks 2025 | Sponsored by Conagra Brands</p>
+            <p>Because verification is bananas! 🍌</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
