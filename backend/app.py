@@ -1,13 +1,19 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from verifier import verify_explanation
 from demo_data import DEMO_EXAMPLES, get_random_demo, search_similar_demos
 import os
 
-app = Flask(__name__)
+app = Flask(__name___name__, static_folder='../frontend', static_url_path='')
 CORS(app)
 
+# Serve frontend
 @app.route('/')
+def index():
+    return send_from_directory('../frontend', 'index.html')
+
+
+@app.route(/api')
 def home():
     return jsonify({
         "message": "ExplAInCheck API - Agriculture Track 🌽",
