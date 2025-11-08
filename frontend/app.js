@@ -1,6 +1,5 @@
 // ExplAInCheck Frontend Application
-const API_BASE_URL = 'http://localhost:5000/api';
-
+const API_BASE_URL = 'http://localhost:5001/api';
 document.addEventListener('DOMContentLoaded', () => {
     const verifyBtn = document.getElementById('verify-btn');
     const demoBtn = document.getElementById('demo-btn');
