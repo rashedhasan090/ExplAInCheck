@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExplAInCheck - AI Explanation Verifier</title>
+    <title>ExplAInCheck - AI Explanation Verifier 🌽</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for interactive visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
         <header>
-            <h1>🍌 ExplAInCheck</h1>
+            <h1>🌾 ExplAInCheck</h1>
             <p class="subtitle">Real-Time AI Explanation Verification for Smart Agriculture</p>
             <div class="badges">
                 <span class="badge">CornHacks 2025</span>
@@ -18,9 +21,18 @@
             </div>
         </header>
 
+        <!-- Main Input Section -->
         <main>
             <section class="input-section">
                 <h2>Enter AI Explanation to Verify</h2>
+                
+                <div class="demo-controls">
+                    <button id="random-demo-btn" class="btn btn-demo">
+                        🎲 Load Random Demo
+                    </button>
+                    <span class="demo-count">500 scenarios available</span>
+                </div>
+
                 <div class="input-group">
                     <label for="domain-select">Domain:</label>
                     <select id="domain-select">
@@ -30,51 +42,118 @@
                         <option value="general">General</option>
                     </select>
                 </div>
-                
+
                 <textarea 
-                    id="explanation-input" 
-                    placeholder="Paste the AI-generated explanation here...\n\nExample:\n'You should water banana plants at 5pm because the soil is cooler, leading to less evaporation. Given that banana plants need consistent moisture, this timing maximizes water absorption.'">
-                </textarea>
-                
+                    id="explanation-input"
+                    placeholder="Paste the AI-generated explanation here...\n\nExample:\n'You should water banana plants at 5pm because the soil is cooler, leading to less evaporation. Given that banana plants need consistent moisture levels and current soil readings show 40% capacity, increase watering to 50mm per week during flowering stage.'"
+                    rows="6"
+                ></textarea>
+
                 <div class="button-group">
-                    <button id="verify-btn" class="btn btn-primary">🔍 Verify Explanation</button>
-                    <button id="demo-btn" class="btn btn-secondary">📝 Load Demo</button>
+                    <button id="verify-btn" class="btn btn-primary">
+                        🔍 Verify Explanation
+                    </button>
+                    <button id="clear-btn" class="btn btn-secondary">
+                        Clear
+                    </button>
+                </div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing explanation...</p>
                 </div>
             </section>
 
+            <!-- Results Section -->
             <section class="results-section" id="results-section" style="display: none;">
                 <h2>Verification Results</h2>
-                
-                <div class="result-card">
-                    <h3>📊 Overall Assessment</h3>
-                    <div id="overall-result"></div>
+
+                <!-- Similarity Match Banner -->
+                <div id="similarity-banner" class="similarity-banner" style="display: none;">
+                    <div class="similarity-content">
+                        <span class="similarity-icon">🎯</span>
+                        <div class="similarity-info">
+                            <strong id="similarity-score"></strong>
+                            <p id="similarity-message"></p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="result-card">
-                    <h3>🔗 Logical Structure</h3>
-                    <div id="logical-structure"></div>
+                <!-- Overall Status Card -->
+                <div class="status-card">
+                    <div class="status-header">
+                        <h3>Overall Status</h3>
+                        <span id="overall-status" class="status-badge"></span>
+                    </div>
+                    <p id="summary-text" class="summary"></p>
                 </div>
 
-                <div class="result-card">
-                    <h3>⚠️ Detected Issues</h3>
-                    <div id="issues-list"></div>
+                <!-- Metrics Dashboard -->
+                <div class="metrics-dashboard">
+                    <h3>Quality Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon">📊</div>
+                            <div class="metric-value" id="metric-data-quality">0%</div>
+                            <div class="metric-label">Data Quality</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">🔍</div>
+                            <div class="metric-value" id="metric-logical">0%</div>
+                            <div class="metric-label">Logical Consistency</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">📝</div>
+                            <div class="metric-value" id="metric-completeness">0%</div>
+                            <div class="metric-label">Completeness</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">🔬</div>
+                            <div class="metric-value" id="metric-evidence">0%</div>
+                            <div class="metric-label">Evidence Strength</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">🌾</div>
+                            <div class="metric-value" id="metric-relevance">0%</div>
+                            <div class="metric-label">Context Relevance</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="result-card">
-                    <h3>💡 Assumptions & Gaps</h3>
-                    <div id="assumptions-list"></div>
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <h3>Status Distribution</h3>
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Confidence Levels</h3>
+                        <canvas id="confidenceChart"></canvas>
+                    </div>
+                    <div class="chart-container chart-wide">
+                        <h3>Quality Analysis Radar</h3>
+                        <canvas id="radarChart"></canvas>
+                    </div>
                 </div>
 
-                <div class="result-card">
-                    <h3>✅ Verified Claims</h3>
-                    <div id="verified-claims"></div>
+                <!-- Recommendations -->
+                <div class="recommendations-section">
+                    <h3>💡 Recommendations</h3>
+                    <ul id="recommendations-list"></ul>
+                </div>
+
+                <!-- Detailed Claims -->
+                <div class="claims-section">
+                    <h3>Detailed Claim Analysis</h3>
+                    <div id="claims-list"></div>
                 </div>
             </section>
         </main>
 
+        <!-- Footer -->
         <footer>
-            <p>Built for CornHacks 2025 | Sponsored by Conagra Brands</p>
-            <p>Because verification is bananas! 🍌</p>
+            <p>Built for CornHacks 2025 | Agriculture Track 🌽 | Banana Track 🍌</p>
+            <p>Ensuring AI explanations are trustworthy for critical farming decisions</p>
         </footer>
     </div>
 
