@@ -34,6 +34,16 @@ Farmers and agricultural businesses need a way to **verify AI explanations befor
 
 ---
 
+## 🎥 Demo Video
+
+Watch ExplAInCheck in action! See how our AI explanation verification system works with real agricultural scenarios:
+
+**[📺 Watch the Demo Video](https://1drv.ms/v/c/645fee2ef572d93d/EaKCkHo0eCRKh-Lmfeo_6FgBPJOiTT5HQpIat5Dt_BisgQ?e=zDtNSP)**
+
+*Click the link above to view our full demonstration on OneDrive.*
+
+---
+
 ## The Agricultural Problem
 
 AI agricultural advisors (from apps, IoT sensors, precision ag platforms) can generate detailed recommendations, but they often:
