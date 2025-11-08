@@ -260,15 +260,15 @@ cd frontend && npm start
 
 ## Demo Video
 
-🎥 **[Watch our 3-minute demo](https://youtu.be/demo-link)**
+🎥 **[Watch our 3-minute demo]([https://youtu.be/demo-link](https://1drv.ms/v/c/645fee2ef572d93d/EaKCkHo0eCRKh-Lmfeo_6FgBPJOiTT5HQpIat5Dt_BisgQ?e=zDtNSP))**
 
 ---
 
 ## Team
 
-- **Developer**: Rashed Hasan  
+- **Developer**: Md Rashedul Hasan  
 - **GitHub**: [@rashedhasan090](https://github.com/rashedhasan090)  
-- **Email**: [your-email@example.com]
+
 
 ---
 
