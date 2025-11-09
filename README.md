@@ -11,17 +11,9 @@
 
 **Try it now:** [https://explaincheck-1.onrender.com](https://explaincheck-1.onrender.com)
 
-![ExplAInCheck Demo](https://via.placeholder.com/800x450.png?text=ExplAInCheck+Live+Demo+Screenshot)
+![ExplAInCheck Demo]([https://via.placeholder.com/800x450.png?text=ExplAInCheck+Live+Demo+Screenshot](https://github.com/rashedhasan090/ExplAInCheck/blob/main/Assets/ExplAInCheck_Demo.gif))
 
-> **Note:** Replace the placeholder above with an actual screenshot of your application. You can:
-> 1. Take a screenshot of the live app
-> 2. Upload it to your GitHub repository (in an `/assets` or `/images` folder)
-> 3. Replace the image URL above with: `./assets/demo-screenshot.png`
->
-> **For an interactive GIF:**
-> - Use tools like [ScreenToGif](https://www.screentogif.com/), [LICEcap](https://www.cockos.com/licecap/), or [Kap](https://getkap.co/)
-> - Record a short demo (10-30 seconds) showing the verification process
-> - Upload the GIF to your repo and update the image link
+
 
 ---
 
