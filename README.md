@@ -11,10 +11,7 @@
 
 **Try it now:** [https://explaincheck-1.onrender.com](https://explaincheck-1.onrender.com)
 
-![ExplAInCheck Demo]([https://via.placeholder.com/800x450.png?text=ExplAInCheck+Live+Demo+Screenshot](https://github.com/rashedhasan090/ExplAInCheck/blob/main/Assets/ExplAInCheck_Demo.gif))
-
-
-
+![ExplAInCheck Demo](https://github.com/rashedhasan090/ExplAInCheck/blob/main/Assets/ExplAInCheck_Demo.gif)
 ---
 
 ## 🏆 Competition Track: **AGRICULTURE**
