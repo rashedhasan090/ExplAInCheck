@@ -9,6 +9,8 @@
 > - ✅ **All development was completed within the official competition timeframe**
 > - ℹ️ The repository was created beforehand with an initial README placeholder
 > - ℹ️ The README content was fully updated after the competition start time
+>
+> - 
 [![CornHacks 2025](https://img.shields.io/badge/CornHacks-2025-green)](https://unlcornhacks.com)
 [![Track](https://img.shields.io/badge/Track-Agriculture-orange)](https://unlcornhacks.com)
 [![Sponsor](https://img.shields.io/badge/Sponsored_by-Conagra_Brands-red)](https://www.conagrabrands.com/)
